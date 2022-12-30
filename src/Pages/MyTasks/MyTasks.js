@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../../contexts/AuthProvider';
 import Loader from '../Shared/Loader/Loader';
-import { Link } from 'react-router-dom';
 import TaskDetails from './TaskDetails';
 
 const MyTasks = () => {
@@ -12,7 +11,7 @@ const MyTasks = () => {
     const { data: myTasks = [], refetch, isLoading } = useQuery({
         queryKey: ['myTasks', user?.email],
         queryFn: async () => {
-            const tasks = await fetch(`http://localhost:5000/mytasks?email=${user?.email}`)
+            const tasks = await fetch(`https://todo-list-server-fawn.vercel.app/mytasks?email=${user?.email}`)
             const data = await tasks.json()
             return data
         }
@@ -51,9 +50,9 @@ const MyTasks = () => {
                     </>
                     :
                     <div>
-                        <h1 className='text-4xl lg:text-6xl text-4xl font-normal text-gray-900 dark:text-white font-semibold'>You don't have <span className='text-4xl font-normal text-gray-900 dark:text-white'>Any Tasks</span></h1>
+                        <h1 className='text-3xl lg:text-4xl font-normal text-gray-900 dark:text-white'>You don't have Any Tasks</h1>
                         <p className='text-xl lg:text-2xl font-semibold font-poppins text-primary mt-5'>
-                            Once you add task, will appear here...
+                            Once you add it will appear here..
                         </p>
                     </div>
             }

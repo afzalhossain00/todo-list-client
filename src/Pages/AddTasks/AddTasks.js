@@ -6,8 +6,8 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const AddTasks = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const imageHostKey = process.env.REACT_APP_imgbb_key;
-    console.log(imageHostKey);
+    // const imageHostKey = process.env.REACT_APP_imgbb_key;
+    // console.log(imageHostKey);
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const [signError, setSignUpError] = useState('')
@@ -17,7 +17,7 @@ const AddTasks = () => {
     const handleAddNotes = data => {
         setSignUpError('')
         const image = data.image[0]
-        console.log(image)
+        // console.log(image)
         const formData = new FormData();
         formData.append('image', image);
         const url = `https://api.imgbb.com/1/upload?key=1f299f4bdc15de3e03ea50ea4db48f7f`;
@@ -37,7 +37,7 @@ const AddTasks = () => {
                     }
 
                     //Post Task Data to the MongoDB
-                    fetch('http://localhost:5000/notes', {
+                    fetch('https://todo-list-server-fawn.vercel.app/notes', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

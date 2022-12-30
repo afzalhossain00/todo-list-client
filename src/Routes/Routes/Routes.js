@@ -3,7 +3,7 @@ import Main from "../../Layout/Main";
 import AddTasks from "../../Pages/AddTasks/AddTasks";
 import CompleteTasks from "../../Pages/CompleteTasks/CompleteTasks";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
-import Home from "../../Pages/Home/Home/Home";
+// import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import MyTasks from "../../Pages/MyTasks/MyTasks";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <AddTasks></AddTasks>
             },
             {
                 path: '/addTasks',
