@@ -7,7 +7,7 @@ const TaskDetails = ({ task, refetch }) => {
 
     //Delete specific Task
     const handleDeleteTask = (id) => {
-        fetch(`http://localhost:5000/deletetask/${id}`, {
+        fetch(`https://todo-list-server-fawn.vercel.app/deletetask/${id}`, {
             method: 'DELETE',
         })
             .then(res => res.json())

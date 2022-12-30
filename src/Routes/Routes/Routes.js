@@ -3,10 +3,12 @@ import Main from "../../Layout/Main";
 import AddTasks from "../../Pages/AddTasks/AddTasks";
 import CompleteTasks from "../../Pages/CompleteTasks/CompleteTasks";
 import ErrorPage from "../../Pages/ErrorPage/ErrorPage";
+import Home from "../../Pages/Home/Home/Home";
 // import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import MyTasks from "../../Pages/MyTasks/MyTasks";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -16,19 +18,19 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <AddTasks></AddTasks>
+                element: <Home></Home>
             },
             {
                 path: '/addTasks',
-                element: <AddTasks></AddTasks>
+                element: <PrivateRoutes><AddTasks></AddTasks></PrivateRoutes>
             },
             {
                 path: '/myTasks',
-                element: <MyTasks></MyTasks>
+                element: <PrivateRoutes><MyTasks></MyTasks></PrivateRoutes>
             },
             {
                 path: '/completeTasks',
-                element: <CompleteTasks></CompleteTasks>
+                element: <PrivateRoutes><CompleteTasks></CompleteTasks></PrivateRoutes>
             },
             {
                 path: '/login',
