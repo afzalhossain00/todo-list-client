@@ -64,7 +64,7 @@ const SignUp = () => {
     return (
         <div className='h-[600px] flex justify-center items-center'>
             <div className='w-96 p-7'>
-                <h2 className='text-2xl font-semibold text-center'>Sign Up</h2>
+                <h2 className='text-4xl font-semibold text-center'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
 
                     <div className="mb-4 mt-10">
