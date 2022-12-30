@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-        <li><Link className='text-lg font-semibold rounded-lg' to='/'>Home</Link></li>
+        {/* <li><Link className='text-lg font-semibold rounded-lg' to='/'>Home</Link></li> */}
         <li><Link className='text-lg font-semibold rounded-lg' to='/addTasks'>Add Tasks</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/myTasks'>My Tasks</Link></li>
         <li><Link className='text-lg font-semibold rounded-lg' to='/completeTasks'>Complete Tasks</Link></li>

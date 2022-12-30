@@ -7,7 +7,7 @@ import { AuthContext } from '../../contexts/AuthProvider';
 
 const SignUp = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm()
-    const { createUser, updateUser } = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
     const [signError, setSignUpError] = useState('')
     // const [createdUserEmail, setCreatedUserEmail] = useState('')
 
